@@ -87,9 +87,9 @@ def main(arguments):
     # set up the spark configuration
     loggers.debug("Connecting to Spark")
     conf = (pyspark.SparkConf().setAppName("JiminyModeler")
-            .set('spark.executor.memory', '4G')
-            .set('spark.driver.memory', '45G')
-            .set('spark.driver.maxResultSize', '10G'))
+            .set('spark.executor.memory', '1G')
+            .set('spark.driver.memory', '1G')
+            .set('spark.driver.maxResultSize', '1G'))
     # get the spark context
     spark = pyspark.sql.SparkSession.builder.config(conf=conf).getOrCreate()
     sc = spark.sparkContext
